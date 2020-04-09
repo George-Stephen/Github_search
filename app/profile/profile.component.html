@@ -1,0 +1,49 @@
+<div *ngIf= "profiles">
+    <div class="card">
+        <div class="card-title">
+            {{profiles.name}},<small>({{profiles.login}})</small>,<br>
+            <span *ngIf ="profiles.company">Works at {{profiles.company}}</span>
+            <span *ngIf = "profiles.location"> lives in {{profiles.location}}</span>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-5">
+                    <img src={{profiles.avatar_url}} class="img-circle img-responsive">
+                </div>
+                <div class="col-md-5">
+                    <ul class="list-group">
+                        <li class="list-group-item" *ngIf = "profiles.bio">
+                            {{profiles.bio}}
+                        </li>
+                        <li class="list-group-item" *ngIf ="profiles.email">
+                            {{profiles.email}}
+                        </li>
+                    </ul>
+                    <div class="col-md-3">
+                        <p>
+                            <span >
+                                Followers : {{profiles.followers}}
+                            </span>
+                            <span>
+                                Following : {{profiles.following}}
+                            </span>
+                            <span >
+                                 repos : {{profiles.public_repos}}
+                            </span>
+                        </p>
+                        <p><a href="{{profiles.html_url}}" target="blank"><button class="btn btn-success btn-md">Github_profile</button></a></p>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                               All Repos
+                            </div>
+                            <div class="panel-body" *ngFor = "let repo of repos">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
