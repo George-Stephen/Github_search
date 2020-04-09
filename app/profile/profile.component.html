@@ -1,7 +1,18 @@
+<a class="nav-item nav-link" routerLink="/start" routerLinkActive='active'><button class="btn btn-lg btn-success ">Home  </button></a>
+<form class="form">
+    <h3>Please enter your username</h3>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search users using the username" name="username" [(ngModel)]="username"><br><br>
+        <button class="btn btn-success btn-lg" (click) = addUser()>Submit</button>
+    </div>
+</form>
+<hr>
+<a class="nav-item nav-link" routerLink="/repos" routerLinkActive='active'><button class="btn btn-lg btn-warning ">Search for  repositories</button></a>
+<hr>
 <div *ngIf= "profiles">
     <div class="card">
         <div class="card-title">
-            {{profiles.name}},<small>({{profiles.login}})</small>,<br>
+            {{profiles.login}},<small>({{profiles.name}})</small>,<br>
             <span *ngIf ="profiles.company">Works at {{profiles.company}}</span>
             <span *ngIf = "profiles.location"> lives in {{profiles.location}}</span>
         </div>
@@ -32,7 +43,6 @@
                             </span>
                         </p>
                         <p><a href="{{profiles.html_url}}" target="blank"><button class="btn btn-success btn-md">Github_profile</button></a></p>
-                        <a href="#repository"><button class="btn btn-success btn-lg">View all repos</button></a>
                     </div>
                 </div>
                 
@@ -40,14 +50,5 @@
 
         </div>
     </div>
-    <div class="card" id="repository">
-        <div class="card-title">
-           <h3>All Repos</h3>
-        </div>
-        <div class="card-body" *ngFor = "let repo of repos">
-            <p>{{repo.name}}</p> <a href="{{repo.html_url}}" target="blank"><button class="btn btn-lg btn-warning pull-right" >View on Github</button>
-            </a>
-            <p>{{repo.description}}</p>
-        </div>
-    </div>
+    
 </div>

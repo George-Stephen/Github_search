@@ -1,6 +1,9 @@
-<form class="form">
-    <h3>Please enter your username</h3>
-    <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search users using the username">
+<div class="container-fluid">
+    Please select one of the following search options
+    <div class="col-md-6">
+    <a class="nav-item nav-link" routerLink="/profile" routerLinkActive='active'><button class="btn btn-lg btn-success ">Search for  Users</button></a>
     </div>
-</form>
+    <div class="col-md-6">
+        <a class="nav-item nav-link" routerLink="/repos" routerLinkActive='active'><button class="btn btn-lg btn-success ">Search for  repositories</button></a>
+        </div>
+</div>
