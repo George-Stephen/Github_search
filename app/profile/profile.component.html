@@ -16,7 +16,7 @@
         <div class="card-title" appUnderline>
             {{profiles.login}},<small>({{profiles.name}})</small>,<br>
             <span *ngIf ="profiles.company">Works at {{profiles.company}}</span>
-            <span *ngIf = "profiles.location"> lives in {{profiles.location}}</span>
+            <span *ngIf = "profiles.location">:{{profiles.location}}</span>
         </div>
         <div class="card-body">
             <div class="row">
