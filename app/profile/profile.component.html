@@ -11,7 +11,7 @@
 <hr>
 <div *ngIf= "profiles">
     <div class="card">
-        <div class="card-title">
+        <div class="card-title" appUnderline>
             {{profiles.login}},<small>({{profiles.name}})</small>,<br>
             <span *ngIf ="profiles.company">Works at {{profiles.company}}</span>
             <span *ngIf = "profiles.location"> lives in {{profiles.location}}</span>
@@ -40,6 +40,9 @@
                             </span>
                             <span >
                                  repos : {{profiles.public_repos}}
+                            </span>
+                            <span>
+                                Created on : {{profiles.created_at| date}}
                             </span>
                         </p>
                         <p><a href="{{profiles.html_url}}" target="blank"><button class="btn btn-success btn-md">Github_profile</button></a></p>

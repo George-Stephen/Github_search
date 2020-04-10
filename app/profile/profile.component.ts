@@ -20,7 +20,8 @@ export class ProfileComponent implements OnInit {
   addUser(){
     this.findprofile.updateprofile(this.username);
     this.findprofile.getprofile();
-    this.profiles = this.findprofile.profiles   
+    this.profiles = this.findprofile.profiles
+    console.log(this.profiles)   
   }
 
   ngOnInit(): void {
