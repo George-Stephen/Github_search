@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient ,HttpHeaders} from '@angular/common/http';
+import {environment } from '../../environments/environment';
 
 
 
@@ -7,9 +8,9 @@ import { HttpClient ,HttpHeaders} from '@angular/common/http';
   providedIn: 'root'
 })
 export class ServicesService {
+  profiles : any;
   private Username : string;
-  private clientid: '728f208a302d5b900d25';
-  private clientsecret : '6dcfb305cb5931322d8b9a372511abb7fa5924db';
+  
 
   constructor( private http : HttpClient ) { 
     console.log("It's Alive !");
@@ -18,7 +19,13 @@ export class ServicesService {
 
 
   getprofile(){
-    return this.http.get("https://api.github.com/users/" + this.Username + "?client_id =" + this.clientid + "&client_secret=" + this.clientsecret)
+    let promise = new Promise((resolve)=>{
+    return this.http.get("https://api.github.com/users/" + this.Username + "?client_id =" + environment.clientId+ "&client_secret=" + environment.clientsecret).toPromise().then(profiles =>{
+      this.profiles = profiles
+      resolve()
+    })
+    })
+    return promise
   }
   updateprofile(username : string){
     this.Username = username

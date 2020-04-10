@@ -8,7 +8,6 @@ import {RepositoriesComponent} from '../app/repositories/repositories.component'
 const routes: Routes = [
   { path: 'profile', component: ProfileComponent},
   { path: 'repos', component: RepositoriesComponent},
-  { path: 'start', component: FormComponent},
 ];
 
 @NgModule({

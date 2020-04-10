@@ -14,10 +14,8 @@ export class RepositoriesComponent implements OnInit {
   }
   showRepos(){
     this.repos_get.updateprofile(this.username)
-    this.repos_get.getrepos().subscribe(repos =>{  
-     this.repos = repos;
-     console.log(this.repos);
-   })
+    this.repos_get.getrepos();
+    this.repos=this.repos_get.repos
  }
   ngOnInit(): void {
   }

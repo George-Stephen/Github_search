@@ -19,15 +19,8 @@ export class ProfileComponent implements OnInit {
   }
   addUser(){
     this.findprofile.updateprofile(this.username);
-    
-    this.findprofile.getprofile().subscribe(userprofile =>{
-      console.log(userprofile)
-      this.profiles = userprofile
-
-    })
-    
-   
-    
+    this.findprofile.getprofile();
+    this.profiles = this.findprofile.profiles   
   }
 
   ngOnInit(): void {
