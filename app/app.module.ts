@@ -11,6 +11,7 @@ import { FormComponent } from './form/form.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { InvalidComponent } from './invalid/invalid.component';
 import { UnderlineDirective } from './underline.directive';
+import { CountPipe } from './count.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { UnderlineDirective } from './underline.directive';
     FormComponent,
     RepositoriesComponent,
     InvalidComponent,
-    UnderlineDirective
+    UnderlineDirective,
+    CountPipe
   ],
   imports: [
     BrowserModule,
