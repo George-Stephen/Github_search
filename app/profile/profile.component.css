@@ -4,12 +4,17 @@ img{
     height: 250px;
 }
 .card{
-    
     text-align: center;
+    background-color: springgreen;
 }
 button{
     width: 300px;
 }
 .form{
     text-align: center;
+    background-color:skyblue;
+    padding: 100px 100px;
+}
+input{
+    background-color: transparent;
 }

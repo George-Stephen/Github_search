@@ -2,3 +2,10 @@
     padding: 200px 200px;
 
 }
+.form{
+    text-align: center;
+    background-color: slategray;
+}
+input{
+    background-color: transparent;
+}

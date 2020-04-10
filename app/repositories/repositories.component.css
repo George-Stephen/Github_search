@@ -1,3 +1,14 @@
 .container-fluid{
     text-align: center;
 }
+.form{
+    text-align: center;
+    background-color: slategray;
+    padding: 100px 100px;
+}
+input{
+    background-color: transparent;
+}
+.card{
+    background-color: springgreen;
+}

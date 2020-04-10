@@ -5,9 +5,10 @@
         <input type="text" class="form-control" placeholder="Search users using the username" name="username" [(ngModel)]="username"><br><br>
         <button class="btn btn-success btn-lg" (click) = addUser()>Submit</button>
     </div>
-</form>
+
 <hr>
 <a class="nav-item nav-link" routerLink="/repos" routerLinkActive='active'><button class="btn btn-lg btn-warning ">Search for  repositories</button></a>
+</form>
 <hr>
 <div *ngIf= "profiles">
     <div class="card">
