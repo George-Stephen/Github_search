@@ -12,3 +12,6 @@ input{
 .card{
     background-color: springgreen;
 }
+button{
+    width: 300px;
+}
