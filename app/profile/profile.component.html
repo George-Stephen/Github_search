@@ -1,15 +1,16 @@
 
 <form class="form">
-    <h3>This is only used to find existing user profiles;Please enter your username</h3>
+    <h3>This is only used to find existing user profiles;<br>Please enter your username</h3>
     <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search users using the username" name="username" [(ngModel)]="username"><br><br>
+        <input type="text" class="form-control" placeholder="Search users using the username" name="username" [(ngModel)]="username">
+        <br><br>
         <button class="btn btn-success btn-lg" (click) = addUser()>Submit</button>
     </div>
 
 <hr>
 <a class="nav-item nav-link" routerLink="/repos" routerLinkActive='active'><button class="btn btn-lg btn-warning ">Search for  repositories</button></a>
-</form>
 <hr>
+</form>
 <div *ngIf= "profiles">
     <div class="card">
         <div class="card-title" appUnderline>
