@@ -2,7 +2,7 @@
 <form class="form">
     <h3>This is only used to find existing user profiles;<br>Please enter your username</h3>
     <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search users using the username" name="username" [(ngModel)]="username">
+        <input type="text" class="form-control" placeholder="Search users using the username" name="username" [(ngModel)]="username" title="Username" required>
         <br><br>
         <button class="btn btn-success btn-lg" (click) = addUser()>Submit</button>
     </div>
